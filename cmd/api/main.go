@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strconv"
 	"time"
 
 	"github.com/felippemozer/telelaudo-teste-golang-api/internal/domain/user"
@@ -67,8 +68,14 @@ func main() {
 				return
 			}
 
-			user, err := user.GetBy(id)
+			idInt, err := strconv.Atoi(id)
+			if err != nil {
+				w.WriteHeader(http.StatusBadRequest)
+				w.Write([]byte("ID is not a number"))
+				return
+			}
 
+			user, err := user.GetBy(int8(idInt))
 			if err != nil {
 				w.WriteHeader(http.StatusInternalServerError)
 				w.Write([]byte(err.Error()))
