@@ -94,6 +94,6 @@ func main() {
 		})
 	})
 
-	fmt.Println("Ready to Serve")
+	fmt.Println("Ready to Serve on port 4000")
 	http.ListenAndServe(":4000", r)
 }
