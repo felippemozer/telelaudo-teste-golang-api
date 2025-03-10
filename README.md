@@ -8,6 +8,12 @@ Consiste do desenvolvimento de rotas para consultas em APIs públicas [OpenWeath
 
 ## Uso
 
+Para executar a API, execute o comando:
+
+```bash
+go run cmd/api/main.go
+```
+
 ## Contato
 
 Felippe Barbosa Mozer - felippemozer22@gmail.com
