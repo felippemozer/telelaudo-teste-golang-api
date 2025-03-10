@@ -10,11 +10,11 @@ import (
 )
 
 type Service interface {
-	GetBy(id string) (*User, error)
+	GetBy(id int8) (*User, error)
 }
 
-func GetBy(id string) (*User, error) {
-	url := fmt.Sprintf("https://jsonplaceholder.typicode.com/users/%s", id)
+func GetBy(id int8) (*User, error) {
+	url := fmt.Sprintf("https://jsonplaceholder.typicode.com/users/%d", id)
 
 	res, err := http.Get(url)
 	if err != nil {
