@@ -14,6 +14,16 @@ Para executar a API, execute o comando:
 go run cmd/api/main.go
 ```
 
+O servidor estará disponível em rede na porta 4000.
+
+## Testes
+
+Para executar todos os testes, execute o comando:
+
+```bash
+go test -v ./...
+```
+
 ## Contato
 
 Felippe Barbosa Mozer - felippemozer22@gmail.com
